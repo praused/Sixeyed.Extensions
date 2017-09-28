@@ -15,10 +15,11 @@ namespace System //Piggybacking on the System namespace
             //return XmlConvert.ToString(dateTime, XmlDateTimeSerializationMode.Utc);
             ////Better to call the other ToXmlDateTime overload, less duplicate code...
             //return dateTime.ToXmlDateTime(XmlDateTimeSerializationMode.Utc);
-            ////...or invoke the static method on the class.
+            ////...or invoke the static method on the class...
             //return ToXmlDateTime(dateTime, XmlDateTimeSerializationMode.Utc);
-            //Best way is to remove this method entirely and provide a default value for XmlDateTimeSerializationMode on the following method.
-            //This option makes mode an optional parameter.
+            //...but the best way is to remove this method entirely, 
+            //and provide a default value for XmlDateTimeSerializationMode on the other overload,
+            //making mode an optional parameter.
         }
         ***************/
 
