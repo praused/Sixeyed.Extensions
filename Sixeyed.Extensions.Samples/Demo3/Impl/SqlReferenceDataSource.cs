@@ -17,7 +17,7 @@ namespace Sixeyed.Extensions.Samples.Demo3.Impl
         {
             return new List<ReferenceDataItem>
             {
-                new ReferenceDataItem { Code = "xyx", Description = "from SQL" },
+                new ReferenceDataItem { Code = "xyz", Description = "from SQL" },
                 new ReferenceDataItem { Code = "xyz", Description = "from SQL 2" }
             };
         }

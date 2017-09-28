@@ -20,5 +20,20 @@ namespace Sixeyed.Extensions.Tests.Demo3
             source = new ApiReferenceDataSource();
             Assert.AreEqual(2, source.GetItems().Count());
         }
+
+        [TestMethod]
+        public void GetItemsByCode_Sql()
+        {
+            IReferenceDataSource source;
+            source = new SqlReferenceDataSource();
+            Assert.AreEqual(2, source.GetItemsByCode("xyz").Count());
+        }
+
+        [TestMethod]
+        public void GetItemsByCode_Xml()
+        {
+            var source = new XmlReferenceDataSource(); //don't even need to cast XmlReferenceDataSource to IReferenceDataSource
+            Assert.AreEqual(2, source.GetItemsByCode("xyz").Count());
+        }
     }
 }
