@@ -22,5 +22,10 @@ namespace Sixeyed.Extensions.Samples.Demo3 //Change namespace to match namespace
             }
             return items;
         }
+
+        public static IEnumerable<ReferenceDataItem> GetAllItemsByCode(this IEnumerable<IReferenceDataSource> sources, string code)
+        {
+            return sources.SelectMany(x => x.GetItemsByCode(code));
+        }
     }
 }
