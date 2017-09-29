@@ -56,6 +56,7 @@
     <Compile Include="Demo1\LegacyExtensionsTests.cs" />
     <Compile Include="Demo2\DateTimeExtensionsTest.cs" />
     <Compile Include="Demo3\ReferenceDataSourceTests.cs" />
+    <Compile Include="Demo4\IReferenceDataSourceCollectionExtensionsTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -64,6 +65,7 @@
       <Name>Sixeyed.Extensions.Samples</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup />
   <Choose>
     <When Condition="'$(VisualStudioVersion)' == '10.0' And '$(IsCodedUITest)' == 'True'">
       <ItemGroup>
