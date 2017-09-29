@@ -54,6 +54,7 @@
     <Compile Include="Demo3\ReferenceDataItem.cs" />
     <Compile Include="Demo4\IReferenceDataSourceCollectionExtensions.cs" />
     <Compile Include="Demo5\ObjectExtensions.cs" />
+    <Compile Include="Demo5\TypeExtensions.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
