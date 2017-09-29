@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,12 +9,16 @@ namespace Sixeyed.Extensions.Samples.Demo3 //Change namespace to match namespace
 {
     public static  class IReferenceDataSourceCollectionExtensions
     {
-        public static IEnumerable<ReferenceDataItem> GetAllItemsByCode(this IReferenceDataSource[] sources, string code)
+        public static IEnumerable<ReferenceDataItem> GetAllItemsByCode(this IEnumerable sources, string code)
         {
             var items = new List<ReferenceDataItem>();
             foreach (var source in sources)
             {
-                items.AddRange(source.GetItemsByCode(code));
+                var refDataSource = source as IReferenceDataSource;
+                if (refDataSource != null)
+                {
+                    items.AddRange(refDataSource.GetItemsByCode(code));
+                }
             }
             return items;
         }
